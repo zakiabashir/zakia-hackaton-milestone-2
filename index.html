@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 >Dynamic Resume builder</h1>
+
+    <form onsubmit="return takeValue()">
+        <table align="center">
+            <tr>
+                <td colspan="2">
+                    <h2>Personal Info</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" id="First_name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" id="Last_name" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="Email" required></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="phone" id="Phone" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" id="DOB" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" id="Gender" value="male" required> Male<br>
+                    <input type="radio" name="gender"  id="Gender" value="female" required> Female<br>
+                    <input type="radio" name="gender"  id="Gender" value="other" required> Other
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address"  id="Address" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Profile Picture:</td>
+                <td><input type="file" name="profile_picture" id="Profile_picture" accept="image/*" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Work Experience</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Job Title:</td>
+                <td><input type="text" name="job_title" id="Job_title" required></td>
+            </tr>
+            <tr>
+                <td>Company Name:</td>
+                <td><input type="text" name="company_name" id="Company_name" required></td>
+            </tr>
+            <tr>
+                <td>Start Date:</td>
+                <td><input type="date" name="start_date" id="Start_date" required></td>
+            </tr>
+            <tr>
+                <td>End Date:</td>
+                <td><input type="date" name="end_date" id="End_date"></td>
+            </tr>
+            <tr>
+                <td>Job Description:</td>
+                <td><textarea name="job_description" id="Job_description" rows="4" required></textarea></td>
+            </tr>
+            <!-- Repeat above block for more work experiences if needed -->
+            <tr>
+                <td colspan="2">
+                    <h2>Education</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Degree:</td>
+                <td><input type="text" name="degree" id="Degree" required></td>
+            </tr>
+            <tr>
+                <td>Institution:</td>
+                <td><input type="text" name="institution" id="Institution" required></td>
+            </tr>
+            <tr>
+                <td>Start Date:</td>
+                <td><input type="date" name="edu_start_date" id="Edu_start_date" required></td>
+            </tr>
+            <tr>
+                <td>End Date:</td>
+                <td><input type="date" name="edu_end_date" id="Edu_end_date"></td>
+            </tr>
+            <tr>
+                <td>Grade:</td>
+                <td><input type="text" name="grade" id="Grade" required></td>
+            </tr>
+            <!-- Repeat above block for more education entries if needed -->
+            <tr>
+                <td colspan="2">
+                    <h2>Skills</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Skills:</td>
+                <td>
+                    <input type="checkbox" name="skills" id="Skills" value="html"> HTML<br>
+                    <input type="checkbox" name="skills" id="Skills" value="css"> CSS<br>
+                    <input type="checkbox" name="skills" id="Skills" value="javascript"> JavaScript<br>
+                    <input type="checkbox" name="skills"id="Skills" value="python"> Python<br>
+                    <input type="checkbox" name="skills" id="Skills" value="sql"> SQL
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Languages</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages:</td>
+                <td>
+                    <input type="checkbox" name="languages" id="Languages" value="english"> English<br>
+                    <input type="checkbox" name="languages" id="Languages" value="urdu"> Urdu<br>
+                    <input type="checkbox" name="languages" id="Languages" value="punjabi"> Punjabi
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Hobbies</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobbies" id="Hobbies" value="reading"> Reading<br>
+                    <input type="checkbox" name="hobbies" id="Hobbies" value="traveling"> Traveling<br>
+                    <input type="checkbox" name="hobbies" id="Hobbies" value="cooking"> Cooking<br>
+                    <input type="checkbox" name="hobbies" id="Hobbies" value="sports"> Sports
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>References</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Reference Name:</td>
+                <td><input type="text" name="reference_name" id="Reference_name" required></td>
+            </tr>
+            <tr>
+                <td>Reference Contact:</td>
+                <td><input type="tel" name="reference_contact" id="Reference_contact" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Cover Letter</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Cover Letter:</td>
+                <td><textarea name="cover_letter" id="Cover_letter" rows="5" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button class="submit-btn">Generate Resume</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+ <!-- Div to display the generated CV -->
+ <div id="cv-output" class="cv-output"></div>
+
+ <script src="index.js"></script>
+ <script src="index.ts"></script>
+</body>
+</html>
